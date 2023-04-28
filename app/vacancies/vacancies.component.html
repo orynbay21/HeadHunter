@@ -1,0 +1,18 @@
+<div class="header">
+  <img src="/assets/logo.jpg" id="logo">
+</div>
+<h1>Vacancy list</h1>
+<fieldset>
+  <label>Vacancy name:</label>
+  <input type="text" [(ngModel)]="newVacancy">
+  <button (click)="addVacancy()">Add vacancy</button>
+</fieldset>
+
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    {{vacancy.id}} - {{vacancy.name}} <button (click)="deleteVacancy(vacancy.id)">X</button>
+  </li>
+</ul>
+
+
+

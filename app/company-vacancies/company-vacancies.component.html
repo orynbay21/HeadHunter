@@ -1,0 +1,14 @@
+
+<div class="header">
+
+  <img src="/assets/logo.jpg" id="logo">
+</div>
+<h1>Company vacancies list</h1>
+
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    <a [routerLink]="['vacancy.id']">
+      {{vacancy.name}}
+    </a>
+  </li>
+</ul>

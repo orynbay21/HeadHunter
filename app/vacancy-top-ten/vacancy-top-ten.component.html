@@ -1,0 +1,11 @@
+<h1>Top ten vacancies with the highest salary:</h1>
+
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    <a [routerLink]="['/vacancies', vacancy.id]">
+        {{vacancy.name}}
+        <br>
+        {{vacancy.salary}}
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+<div class="header">
+  <img src="/assets/logo.jpg" id="logo">
+</div>
+
+<h1>Company list</h1>
+<fieldset>
+  <input type="text" [(ngModel)]="newCompany">
+  <button (click)="addCompany()">Add company</button>
+</fieldset>
+
+<ul>
+  <li *ngFor="let company of companies" >
+    <a [routerLink]="['/companies', company.id]">
+      {{company.id}} {{company.name}}
+    </a>
+  <button onclick="window.location.href='/companies/company.id/vacancies';">All vacancies</button>
+    <button onclick="window.location.href='/companies/company.id';">Details</button>
+  </li>
+</ul>
